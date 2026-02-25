@@ -1,0 +1,38 @@
+﻿
+> immo-platform@0.1.0 start
+> next start
+
+Ôû▓ Next.js 16.1.6
+- Local:         http://localhost:3000
+- Network:       http://192.168.2.4:3000
+
+Ô£ô Starting...
+Ô£ô Ready in 4.6s
+node.exe : [33m[au
+th][warn][debug-ena
+bled][0m Read 
+more: https://warni
+ngs.authjs.dev
+Au caractère 
+Ligne:1 : 1
++ & "C:\Program Fil
+es\nodejs/node.exe"
+ "C:\Program Files\
+nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~
+    + CategoryInfo 
+             : 
+NotSpecified    : 
+([33m[auth][war.  
+  ..ings.authjs.dev
+:S    tring) [], 
+RemoteEx    ception
+    + 
+FullyQualifiedErr  
+  orId : 
+NativeComman    
+dError
+ 

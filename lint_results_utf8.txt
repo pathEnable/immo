@@ -1,0 +1,104 @@
+﻿
+> immo-platform@0.1.0 lint
+> eslint
+
+
+E:\ong\IMMO\src\app\(admin)\admin\page.tsx
+   36:70  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  113:26  error  'BarChart3' is not defined                                       react/jsx-no-undef
+
+E:\ong\IMMO\src\app\(admin)\admin\properties\page.tsx
+   6:5  warning  'Trash2' is defined but never used        @typescript-eslint/no-unused-vars
+   7:5  warning  'ExternalLink' is defined but never used  @typescript-eslint/no-unused-vars
+  11:5  warning  'Tag' is defined but never used           @typescript-eslint/no-unused-vars
+
+E:\ong\IMMO\src\app\(admin)\admin\transactions\page.tsx
+  8:5  warning  'Search' is defined but never used  @typescript-eslint/no-unused-vars
+  9:5  warning  'Filter' is defined but never used  @typescript-eslint/no-unused-vars
+
+E:\ong\IMMO\src\app\(admin)\admin\users\page.tsx
+   5:5    warning  'ShieldAlert' is defined but never used                          @typescript-eslint/no-unused-vars
+   6:5    warning  'Trash2' is defined but never used                               @typescript-eslint/no-unused-vars
+   9:5    warning  'Filter' is defined but never used                               @typescript-eslint/no-unused-vars
+  44:124  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+E:\ong\IMMO\src\app\(admin)\layout.tsx
+  10:5  warning  'ShieldCheck' is defined but never used  @typescript-eslint/no-unused-vars
+  12:5  warning  'Settings' is defined but never used     @typescript-eslint/no-unused-vars
+
+E:\ong\IMMO\src\app\(auth)\login\page.tsx
+  34:18  warning  'err' is defined but never used  @typescript-eslint/no-unused-vars
+
+E:\ong\IMMO\src\app\(auth)\register\page.tsx
+  46:18  warning  'err' is defined but never used  @typescript-eslint/no-unused-vars
+
+E:\ong\IMMO\src\app\(main)\agents\[id]\page.tsx
+    8:5   warning  'MapPin' is defined but never used                                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+   13:5   warning  'Home' is defined but never used                                                                                                                                                                                                                                                         @typescript-eslint/no-unused-vars
+   51:1   warning  Prevent Client Components from being async functions. See: https://nextjs.org/docs/messages/no-async-client-component                                                                                                                                                                    @next/next/no-async-client-component
+   52:13  warning  'id' is assigned a value but never used                                                                                                                                                                                                                                                  @typescript-eslint/no-unused-vars
+   61:29  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  137:41  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+E:\ong\IMMO\src\app\(main)\chat\page.tsx
+  11:5   warning  'ArrowLeft' is defined but never used                                                                                                                                                                                                                                                    @typescript-eslint/no-unused-vars
+  73:41  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+E:\ong\IMMO\src\app\(main)\dashboard\list-property\page.tsx
+   9:5  warning  'Home' is defined but never used        @typescript-eslint/no-unused-vars
+  10:5  warning  'MapPin' is defined but never used      @typescript-eslint/no-unused-vars
+  11:5  warning  'DollarSign' is defined but never used  @typescript-eslint/no-unused-vars
+
+E:\ong\IMMO\src\app\(main)\dashboard\page.tsx
+   5:5  warning  'LayoutDashboard' is defined but never used  @typescript-eslint/no-unused-vars
+  16:5  warning  'AlertCircle' is defined but never used      @typescript-eslint/no-unused-vars
+
+E:\ong\IMMO\src\app\(main)\dashboard\withdraw\page.tsx
+  10:5   warning  'X' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      @typescript-eslint/no-unused-vars
+  32:58  error    Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+E:\ong\IMMO\src\app\(main)\dashboard\withdraw\page.tsx:32:58
+  30 |     };
+  31 |
+> 32 |     const receiptNumber = React.useMemo(() => Math.floor(Math.random() * 90000000) + 10000000, []);
+     |                                                          ^^^^^^^^^^^^^ Cannot call impure function
+  33 |
+  34 |     if (success) {
+  35 |         return (  react-hooks/purity
+
+E:\ong\IMMO\src\app\api\admin\properties\[id]\route.ts
+  22:14  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+
+E:\ong\IMMO\src\app\api\admin\properties\[id]\verify\route.ts
+  31:14  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+
+E:\ong\IMMO\src\app\api\admin\users\[id]\role\route.ts
+  25:14  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+
+E:\ong\IMMO\src\app\api\admin\users\[id]\route.ts
+  27:14  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+
+E:\ong\IMMO\src\app\layout.tsx
+  3:8  warning  'Navbar' is defined but never used        @typescript-eslint/no-unused-vars
+  4:8  warning  'Footer' is defined but never used        @typescript-eslint/no-unused-vars
+  5:8  warning  'BottomNavbar' is defined but never used  @typescript-eslint/no-unused-vars
+
+E:\ong\IMMO\src\components\AdminPropertyActions.tsx
+  7:5  warning  'ShieldAlert' is defined but never used  @typescript-eslint/no-unused-vars
+
+E:\ong\IMMO\src\components\AdminUserActions.tsx
+  7:5  warning  'ShieldAlert' is defined but never used  @typescript-eslint/no-unused-vars
+
+E:\ong\IMMO\src\components\Navbar.tsx
+   6:10  warning  'Menu' is defined but never used                @typescript-eslint/no-unused-vars
+   6:16  warning  'X' is defined but never used                   @typescript-eslint/no-unused-vars
+  10:12  warning  'isOpen' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  10:20  warning  'setIsOpen' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+E:\ong\IMMO\src\lib\auth.ts
+  48:39  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+Ô£û 44 problems (5 errors, 39 warnings)
+

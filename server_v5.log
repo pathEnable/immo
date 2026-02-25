@@ -1,0 +1,26 @@
+
+> immo-platform@0.1.0 start
+> next start
+
+▲ Next.js 16.1.6
+- Local:         http://localhost:3000
+- Network:       http://192.168.2.4:3000
+
+✓ Starting...
+✓ Ready in 2.9s
+⨯ upstream image response failed for https://images.unsplash.com/photo-1522708323590-d248b6d0267d?auto=format&fit=crop&q=80&w=1200 404
+⨯ upstream image response failed for https://images.unsplash.com/photo-1522708323590-d248b6d0267d?auto=format&fit=crop&q=80&w=1200 404
+⨯ upstream image response failed for https://images.unsplash.com/photo-1522708323590-d248b6d0267d?auto=format&fit=crop&q=80&w=1200 404
+⨯ upstream image response failed for https://images.unsplash.com/photo-1522708323590-d248b6d0267d?auto=format&fit=crop&q=80&w=1200 404
+⨯ upstream image response failed for https://images.unsplash.com/photo-1522708323590-d248b6d0267d?auto=format&fit=crop&q=80&w=1200 404
+⨯ upstream image response failed for https://images.unsplash.com/photo-1522708323590-d248b6d0267d?auto=format&fit=crop&q=80&w=1200 404
+⨯ upstream image response failed for https://images.unsplash.com/photo-1536376073347-35712e390ee5?auto=format&fit=crop&q=80&w=1200 404
+⨯ upstream image response failed for https://images.unsplash.com/photo-1531123897727-8f129e16fd47?auto=format&fit=crop&q=80&w=400 404
+⨯ upstream image response failed for https://images.unsplash.com/photo-1522708323590-d248b6d0267d?auto=format&fit=crop&q=80&w=1200 404
+⨯ upstream image response failed for https://images.unsplash.com/photo-1522708323590-d248b6d0267d?auto=format&fit=crop&q=80&w=1200 404
+⨯ upstream image response failed for https://images.unsplash.com/photo-1522708323590-d248b6d0267d?auto=format&fit=crop&q=80&w=1200 404
+⨯ upstream image response failed for https://images.unsplash.com/photo-1536376073347-35712e390ee5?auto=format&fit=crop&q=80&w=1200 404
+⨯ upstream image response failed for https://images.unsplash.com/photo-1512918766671-5079a0d8794c?auto=format&fit=crop&q=80&w=800 404
+⨯ upstream image response failed for https://images.unsplash.com/photo-1522708323590-d248b6d0267d?auto=format&fit=crop&q=80&w=1200 404
+⨯ upstream image response failed for https://images.unsplash.com/photo-1536376073347-35712e390ee5?auto=format&fit=crop&q=80&w=1200 404
+⨯ upstream image response failed for https://images.unsplash.com/photo-1512918766671-5079a0d8794c?auto=format&fit=crop&q=80&w=800 404
