@@ -64,7 +64,7 @@ export default async function AdminDashboardPage() {
                     </div>
 
                     <div className="space-y-4">
-                        {latestTransactions.map((tx) => (
+                        {latestTransactions.map((tx: { id: string; type: string; provider: string; status: string; amount: number; currency: string; createdAt: Date }) => (
                             <div key={tx.id} className="flex items-center justify-between p-6 bg-gray-50 rounded-3xl border border-transparent hover:border-indigo-immo/10 hover:bg-white transition-all group">
                                 <div className="flex items-center gap-5">
                                     <div className={`p-3 rounded-2xl ${tx.status === "COMPLETED" ? "bg-green-100 text-green-600" : "bg-amber-100 text-amber-600"}`}>
