@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { MapPin, Filter, SlidersHorizontal, ShieldCheck } from "lucide-react";
+import { useSearchParams } from "next/navigation";
+import { MapPin, Filter, SlidersHorizontal, ShieldCheck, Home } from "lucide-react";
 import FavoriteButton from "./FavoriteButton";
 
 type Property = {
@@ -47,9 +48,9 @@ function PropertyCard({ prop }: { prop: Property }) {
                     </h4>
                 </div>
                 <div className="flex justify-between items-center pt-4 border-t border-gray-50 mt-auto">
-                    <div className="text-indigo-immo font-black text-xl">
-                        {prop.price.toLocaleString()} FCFA
-                        <span className="text-xs font-normal text-gray-400 block">/mois</span>
+                    <div className="text-indigo-immo font-bold text-lg">
+                        {prop.price.toLocaleString()} <span className="text-sm font-semibold">FCFA</span>
+                        <span className="text-xs font-normal text-gray-500 block">/mois</span>
                     </div>
                     <Link href={`/property/${prop.id}`} className="btn-primary py-2 px-4 shadow-sm text-sm">
                         Détails
@@ -61,14 +62,24 @@ function PropertyCard({ prop }: { prop: Property }) {
 }
 
 export default function SearchResults({ initialProperties }: { initialProperties: Property[] }) {
+    const searchParams = useSearchParams();
     const [showFilters, setShowFilters] = useState(false);
+    const [searchQuery, setSearchQuery] = useState("");
     const [typeFilter, setTypeFilter] = useState("Tous");
     const [sortBy, setSortBy] = useState("recent");
+
+    useEffect(() => {
+        const q = searchParams.get("q") || "";
+        const type = searchParams.get("type") || "";
+        setSearchQuery(q);
+        if (type && type !== "Type de bien") setTypeFilter(type);
+    }, [searchParams]);
 
     const types = ["Tous", "Appartement", "Villa", "Studio", "Chambre", "Bureau"];
 
     const filtered = initialProperties
         .filter((p) => typeFilter === "Tous" || p.type === typeFilter)
+        .filter((p) => !searchQuery || p.neighborhood.toLowerCase().includes(searchQuery.toLowerCase()) || p.location.toLowerCase().includes(searchQuery.toLowerCase()) || p.title.toLowerCase().includes(searchQuery.toLowerCase()))
         .sort((a, b) => {
             if (sortBy === "price-asc") return a.price - b.price;
             if (sortBy === "price-desc") return b.price - a.price;
@@ -84,6 +95,8 @@ export default function SearchResults({ initialProperties }: { initialProperties
                         <div className="flex-grow relative">
                             <input
                                 type="text"
+                                value={searchQuery}
+                                onChange={(e) => setSearchQuery(e.target.value)}
                                 placeholder="Où cherchez-vous ? (ex: Cocody, Plateau...)"
                                 className="w-full bg-white/10 border border-white/20 text-white rounded-xl py-4 pl-12 pr-4 outline-none focus:bg-white/20 transition-all placeholder:text-indigo-200"
                             />
@@ -167,8 +180,8 @@ export default function SearchResults({ initialProperties }: { initialProperties
                     {/* Main Results Section */}
                     <main className="flex-grow">
                         <div className="flex justify-between items-center mb-8">
-                            <h1 className="text-2xl font-black text-indigo-immo">
-                                {filtered.length} résultat{filtered.length > 1 ? "s" : ""} trouvé{filtered.length > 1 ? "s" : ""}
+                            <h1 className="text-xl font-bold text-indigo-immo">
+                                <span className="text-2xl font-black text-gold-immo">{filtered.length}</span> résultat{filtered.length > 1 ? "s" : ""} trouvé{filtered.length > 1 ? "s" : ""}
                             </h1>
                             <select
                                 value={sortBy}
@@ -182,11 +195,15 @@ export default function SearchResults({ initialProperties }: { initialProperties
                         </div>
 
                         {filtered.length === 0 ? (
-                            <div className="text-center py-20">
-                                <p className="text-gray-400 text-lg font-medium">Aucun bien ne correspond à vos critères.</p>
+                            <div className="text-center py-20 bg-white rounded-3xl border border-gray-100 shadow-sm">
+                                <div className="w-20 h-20 bg-cream-immo rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <Home size={36} className="text-gold-immo" />
+                                </div>
+                                <h3 className="text-xl font-bold text-indigo-immo mb-2">Aucun bien trouvé</h3>
+                                <p className="text-gray-600 text-sm mb-6 max-w-xs mx-auto">Essayez d&apos;élargir vos critères de recherche.</p>
                                 <button
-                                    onClick={() => setTypeFilter("Tous")}
-                                    className="mt-4 btn-primary py-2 px-6 text-sm"
+                                    onClick={() => { setTypeFilter("Tous"); setSearchQuery(""); }}
+                                    className="btn-primary py-2.5 px-6 text-sm"
                                 >
                                     Réinitialiser les filtres
                                 </button>

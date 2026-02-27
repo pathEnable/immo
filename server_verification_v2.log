@@ -8,3 +8,34 @@
 
 ✓ Starting...
 ✓ Ready in 7.1s
+Fetch Verifications Error: Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.verificationRequest.findMany()` invocation:
+
+
+The table `public.VerificationRequest` does not exist in the current database.
+    at async w (E:\ong\IMMO\.next\server\chunks\[root-of-the-server]__f2177558._.js:1:1785)
+    at async d (E:\ong\IMMO\.next\server\chunks\[root-of-the-server]__f2177558._.js:1:5076) {
+  code: 'P2021',
+  meta: [Object],
+  clientVersion: '7.4.1'
+}
+⨯ upstream image response failed for https://images.unsplash.com/photo-1522708323590-d248b6d0267d?auto=format&fit=crop&q=80&w=1200 404
+⨯ upstream image response failed for https://images.unsplash.com/photo-1536376073347-35712e390ee5?auto=format&fit=crop&q=80&w=1200 404
+Fetch Verifications Error: Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.verificationRequest.findMany()` invocation:
+
+
+The table `public.VerificationRequest` does not exist in the current database.
+    at async w (E:\ong\IMMO\.next\server\chunks\[root-of-the-server]__f2177558._.js:1:1785)
+    at async d (E:\ong\IMMO\.next\server\chunks\[root-of-the-server]__f2177558._.js:1:5076) {
+  code: 'P2021',
+  meta: [Object],
+  clientVersion: '7.4.1'
+}
+⨯ upstream image response failed for https://images.unsplash.com/photo-1522708323590-d248b6d0267d?auto=format&fit=crop&q=80&w=1200 404
+⨯ upstream image response failed for https://images.unsplash.com/photo-1536376073347-35712e390ee5?auto=format&fit=crop&q=80&w=1200 404
+⨯ upstream image response failed for https://images.unsplash.com/photo-1522708323590-d248b6d0267d?auto=format&fit=crop&q=80&w=1200 404
+⨯ upstream image response failed for https://images.unsplash.com/photo-1522708323590-d248b6d0267d?auto=format&fit=crop&q=80&w=1200 404
+⨯ upstream image response failed for https://images.unsplash.com/photo-1522708323590-d248b6d0267d?auto=format&fit=crop&q=80&w=1200 404
+⨯ upstream image response failed for https://images.unsplash.com/photo-1522708323590-d248b6d0267d?auto=format&fit=crop&q=80&w=1200 404
+⨯ upstream image response failed for https://images.unsplash.com/photo-1522708323590-d248b6d0267d?auto=format&fit=crop&q=80&w=1200 404

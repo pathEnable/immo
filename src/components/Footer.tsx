@@ -14,19 +14,19 @@ const Footer = () => {
                                 IMMO<span className="text-gold-immo">.</span>
                             </span>
                         </Link>
-                        <p className="text-indigo-100 leading-relaxed">
+                        <p className="text-indigo-200 leading-relaxed">
                             La plateforme immobilière de confiance en Afrique. Nous connectons locataires et propriétaires en toute sécurité et simplicité.
                         </p>
                         <div className="flex items-center gap-4">
-                            <Link href="#" className="p-2 bg-white/10 rounded-full hover:bg-gold-immo hover:text-indigo-immo transition-all">
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="p-2.5 bg-white/10 rounded-full hover:bg-gold-immo hover:text-indigo-immo transition-all" aria-label="Facebook">
                                 <Facebook size={20} />
-                            </Link>
-                            <Link href="#" className="p-2 bg-white/10 rounded-full hover:bg-gold-immo hover:text-indigo-immo transition-all">
+                            </a>
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="p-2.5 bg-white/10 rounded-full hover:bg-gold-immo hover:text-indigo-immo transition-all" aria-label="Instagram">
                                 <Instagram size={20} />
-                            </Link>
-                            <Link href="#" className="p-2 bg-white/10 rounded-full hover:bg-gold-immo hover:text-indigo-immo transition-all">
+                            </a>
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="p-2.5 bg-white/10 rounded-full hover:bg-gold-immo hover:text-indigo-immo transition-all" aria-label="Twitter">
                                 <Twitter size={20} />
-                            </Link>
+                            </a>
                         </div>
                     </div>
 
@@ -34,10 +34,10 @@ const Footer = () => {
                     <div>
                         <h4 className="text-lg font-bold text-gold-immo mb-6">Liens Rapides</h4>
                         <ul className="space-y-4">
-                            <li><Link href="/search" className="hover:text-gold-immo transition-colors">Rechercher un bien</Link></li>
-                            <li><Link href="/dashboard" className="hover:text-gold-immo transition-colors">Gestion Propriétaire</Link></li>
-                            <li><Link href="/agents" className="hover:text-gold-immo transition-colors">Nos Agents Certifiés</Link></li>
-                            <li><Link href="/about" className="hover:text-gold-immo transition-colors">À propos de nous</Link></li>
+                            <li><Link href="/search" className="text-indigo-200 hover:text-gold-immo transition-colors">Rechercher un bien</Link></li>
+                            <li><Link href="/dashboard" className="text-indigo-200 hover:text-gold-immo transition-colors">Gestion Propriétaire</Link></li>
+                            <li><Link href="/search" className="text-indigo-200 hover:text-gold-immo transition-colors">Nos Agents Certifiés</Link></li>
+                            <li><Link href="/login" className="text-indigo-200 hover:text-gold-immo transition-colors">Se connecter</Link></li>
                         </ul>
                     </div>
 
@@ -45,10 +45,10 @@ const Footer = () => {
                     <div>
                         <h4 className="text-lg font-bold text-gold-immo mb-6">Services</h4>
                         <ul className="space-y-4">
-                            <li><Link href="#" className="hover:text-gold-immo transition-colors">Vérification de Biens</Link></li>
-                            <li><Link href="#" className="hover:text-gold-immo transition-colors">Paiement Sécurisé Escrow</Link></li>
-                            <li><Link href="#" className="hover:text-gold-immo transition-colors">Assistance 24/7</Link></li>
-                            <li><Link href="#" className="hover:text-gold-immo transition-colors">Conseil Immobilier</Link></li>
+                            <li><Link href="/search" className="text-indigo-200 hover:text-gold-immo transition-colors">Vérification de Biens</Link></li>
+                            <li><Link href="/dashboard" className="text-indigo-200 hover:text-gold-immo transition-colors">Paiement Sécurisé</Link></li>
+                            <li><Link href="/chat" className="text-indigo-200 hover:text-gold-immo transition-colors">Assistance & Chat</Link></li>
+                            <li><Link href="/dashboard/become-agent" className="text-indigo-200 hover:text-gold-immo transition-colors">Devenir Agent</Link></li>
                         </ul>
                     </div>
 
@@ -56,23 +56,23 @@ const Footer = () => {
                     <div className="space-y-6">
                         <h4 className="text-lg font-bold text-gold-immo mb-6">Contact</h4>
                         <div className="space-y-4">
-                            <div className="flex items-center gap-3">
-                                <Phone className="text-gold-immo" size={20} />
+                            <a href="tel:+2250102030405" className="flex items-center gap-3 text-indigo-200 hover:text-gold-immo transition-colors">
+                                <Phone className="text-gold-immo shrink-0" size={20} />
                                 <span>+225 01 02 03 04 05</span>
-                            </div>
-                            <div className="flex items-center gap-3">
-                                <Mail className="text-gold-immo" size={20} />
+                            </a>
+                            <a href="mailto:contact@immo-afrique.com" className="flex items-center gap-3 text-indigo-200 hover:text-gold-immo transition-colors">
+                                <Mail className="text-gold-immo shrink-0" size={20} />
                                 <span>contact@immo-afrique.com</span>
-                            </div>
-                            <div className="flex items-center gap-3">
-                                <MapPin className="text-gold-immo" size={20} />
+                            </a>
+                            <div className="flex items-center gap-3 text-indigo-200">
+                                <MapPin className="text-gold-immo shrink-0" size={20} />
                                 <span>Cocody, Plateau, Abidjan</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div className="mt-16 pt-8 border-t border-white/10 text-center text-indigo-200 text-sm pb-20 md:pb-0">
+                <div className="mt-16 pt-8 border-t border-white/10 text-center text-indigo-300 text-sm pb-20 md:pb-0">
                     <p>© {new Date().getFullYear()} IMMO Platform. Tous droits réservés. Développé pour l&apos;Afrique.</p>
                 </div>
             </div>

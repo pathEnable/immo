@@ -133,7 +133,7 @@ const LoginPage = () => {
                         <button
                             type="submit"
                             disabled={loading}
-                            className="w-full btn-indigo py-4 flex items-center justify-center gap-3 text-lg group transition-all"
+                            className="w-full btn-primary py-4 flex items-center justify-center gap-3 text-lg group transition-all"
                         >
                             {loading ? (
                                 <Loader2 className="animate-spin" size={20} />

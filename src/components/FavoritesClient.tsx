@@ -49,7 +49,7 @@ export default function FavoritesClient({ initialFavorites }: { initialFavorites
                         <Heart size={48} className="text-terracotta-immo" />
                     </div>
                     <h2 className="text-3xl font-black text-indigo-immo">Aucun favori</h2>
-                    <p className="text-gray-500 max-w-md">
+                    <p className="text-gray-600 max-w-md">
                         Parcourez les biens et appuyez sur le cœur pour sauvegarder vos propriétés préférées.
                     </p>
                     <Link href="/search" className="btn-primary py-3 px-8 inline-flex items-center gap-2">
@@ -114,9 +114,9 @@ export default function FavoritesClient({ initialFavorites }: { initialFavorites
                                     </h4>
                                 </div>
                                 <div className="flex justify-between items-center pt-4 border-t border-gray-50 mt-auto">
-                                    <div className="text-indigo-immo font-black text-xl">
-                                        {fav.property.price.toLocaleString()} FCFA
-                                        <span className="text-xs font-normal text-gray-400 block">/mois</span>
+                                    <div className="text-indigo-immo font-bold text-lg">
+                                        {fav.property.price.toLocaleString()} <span className="text-sm font-semibold">FCFA</span>
+                                        <span className="text-xs font-normal text-gray-500 block">/mois</span>
                                     </div>
                                     <Link href={`/property/${fav.property.id}`} className="btn-primary py-2 px-4 shadow-sm text-sm">
                                         Détails
