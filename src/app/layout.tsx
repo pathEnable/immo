@@ -8,6 +8,7 @@ const outfit = Outfit({
   weight: ["400", "500", "600", "700", "800", "900"],
   variable: "--font-outfit",
   display: "swap",
+  preload: false, // Skip build-time fetch (blocked on some networks)
 });
 
 export const metadata: Metadata = {
